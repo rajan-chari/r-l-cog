@@ -6,7 +6,5 @@ Gemfile.lock
 .bundle/
 vendor/
 
-# Local agent / editor state — do not publish
-identity.json
-.claude/
+# Local agent / editor state
 .github/copilot/
