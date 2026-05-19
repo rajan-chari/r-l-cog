@@ -1,13 +1,28 @@
 ---
-layout: default
+layout: page
 title: About
 permalink: /about/
 ---
 
-# About
+Hi, I'm **Rajan Chari**. This is where I keep notes, writing, projects, and
+videos in one place.
 
-This is **r-l-cog** — a personal blog of notes, experiments, and ideas by Rajan.
+The site is intentionally minimal — single-column, no clutter, plain
+typography. Built with [Jekyll](https://jekyllrb.com/) and hosted on
+GitHub Pages. Source lives at
+[github.com/rajan-chari/r-l-cog](https://github.com/rajan-chari/r-l-cog).
 
-The layout is intentionally minimal, modeled after Hacker News: a ranked list of
-posts, plain typography, no chrome. Posts are written in Markdown and built with
-Jekyll on GitHub Pages.
+## Sections
+
+- [Blog]({{ '/' | relative_url }}) — long-form posts.
+- [Projects]({{ '/projects/' | relative_url }}) — things I've built or am working on.
+- [YouTube]({{ '/youtube/' | relative_url }}) — videos, talks, and commentary.
+
+## Elsewhere
+
+- GitHub: [rajan-chari](https://github.com/rajan-chari)
+- RSS: [feed.xml]({{ '/feed.xml' | relative_url }})
+
+## Contact
+
+Best way to reach me is via GitHub.
