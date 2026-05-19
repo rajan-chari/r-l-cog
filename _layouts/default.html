@@ -9,23 +9,23 @@
   {% seo %}
 </head>
 <body>
-  <header class="topbar">
-    <div class="topbar-inner">
-      <a class="brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
-      <nav class="topnav">
-        <a href="{{ '/' | relative_url }}">posts</a>
-        <a href="{{ '/about/' | relative_url }}">about</a>
-        <a href="{{ '/feed.xml' | relative_url }}">rss</a>
-      </nav>
+  <div class="site">
+    <div class="title">
+      <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
+      <a class="extra" href="{{ '/about/' | relative_url }}">about</a>
+      <a class="extra" href="{{ '/feed.xml' | relative_url }}">rss</a>
     </div>
-  </header>
 
-  <main class="content">
     {{ content }}
-  </main>
 
-  <footer class="footer">
-    <span>&copy; {{ site.time | date: '%Y' }} {{ site.author }}</span>
-  </footer>
+    <div class="footer">
+      <div class="contact">
+        &copy; {{ site.time | date: '%Y' }} {{ site.author }}
+      </div>
+      <div class="rss">
+        <a href="{{ '/feed.xml' | relative_url }}">subscribe via rss</a>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
