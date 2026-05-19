@@ -1,0 +1,12 @@
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+Gemfile.lock
+.bundle/
+vendor/
+
+# Local agent / editor state — do not publish
+identity.json
+.claude/
+.github/copilot/

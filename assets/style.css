@@ -1,0 +1,128 @@
+:root {
+  --bg: #f6f6ef;
+  --fg: #222;
+  --muted: #828282;
+  --accent: #ff6600;
+  --link: #000;
+  --link-visited: #555;
+  --max-width: 900px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+a { color: var(--link); text-decoration: none; }
+a:visited { color: var(--link-visited); }
+a:hover { text-decoration: underline; }
+
+.topbar {
+  background: var(--accent);
+  padding: 4px 8px;
+}
+.topbar-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.brand {
+  font-weight: bold;
+  color: #000 !important;
+  font-size: 15px;
+  margin-right: 8px;
+}
+.topnav a {
+  color: #000;
+  margin-right: 8px;
+  font-size: 13px;
+}
+
+.content {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 12px 8px 32px;
+}
+
+.post-list {
+  list-style: decimal inside;
+  padding: 0;
+  margin: 0;
+}
+.post-item {
+  margin: 4px 0 10px;
+}
+.post-title a {
+  font-size: 15px;
+}
+.post-meta {
+  color: var(--muted);
+  font-size: 11px;
+  margin-top: 2px;
+  padding-left: 18px;
+}
+.post-meta .tag {
+  background: #eee;
+  padding: 0 4px;
+  border-radius: 2px;
+  font-size: 10px;
+}
+.post-meta a { color: var(--muted); }
+.ext { color: var(--muted); font-size: 12px; margin-left: 4px; }
+
+.post-title-full {
+  font-size: 20px;
+  margin: 8px 0 4px;
+}
+.post-body {
+  margin-top: 16px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.post-body p { margin: 0 0 12px; }
+.post-body pre, .post-body code {
+  font-family: "Consolas", "Menlo", "Courier New", monospace;
+  font-size: 13px;
+  background: #efeee6;
+}
+.post-body pre {
+  padding: 8px;
+  overflow-x: auto;
+  border: 1px solid #e0dfd5;
+}
+.post-body code { padding: 1px 3px; }
+.post-body pre code { background: none; padding: 0; }
+.post-body blockquote {
+  border-left: 3px solid #ddd;
+  margin: 0 0 12px;
+  padding-left: 12px;
+  color: #555;
+}
+.post-body h1, .post-body h2, .post-body h3 {
+  margin-top: 24px;
+  margin-bottom: 8px;
+}
+
+.post-back {
+  margin-top: 24px;
+  font-size: 12px;
+}
+
+.footer {
+  max-width: var(--max-width);
+  margin: 24px auto 16px;
+  padding: 8px;
+  border-top: 1px solid #e0dfd5;
+  color: var(--muted);
+  font-size: 11px;
+  text-align: center;
+}

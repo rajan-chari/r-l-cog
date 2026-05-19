@@ -1,0 +1,22 @@
+title: r-l-cog
+tagline: Rajan's notes
+author: Rajan
+description: A blog of thoughts, experiments, and notes.
+baseurl: "/r-l-cog"
+url: "https://rajan-chari.github.io"
+
+permalink: /:year/:month/:day/:title/
+
+markdown: kramdown
+highlighter: rouge
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - identity.json
+  - .claude
