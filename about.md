@@ -20,9 +20,4 @@ GitHub Pages. Source lives at
 
 ## Elsewhere
 
-- GitHub: [rajan-chari](https://github.com/rajan-chari)
 - RSS: [feed.xml]({{ '/feed.xml' | relative_url }})
-
-## Contact
-
-Best way to reach me is via GitHub.
