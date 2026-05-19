@@ -10,6 +10,8 @@ permalink: /:year/:month/:day/:title/
 markdown: kramdown
 highlighter: rouge
 
+future: true
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Hello, world (again)"
-date: 2026-05-19 14:00:00 -0700
+date: 2026-05-19 08:00:00 -0700
 tags: [meta]
 ---
 
