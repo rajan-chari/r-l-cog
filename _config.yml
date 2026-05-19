@@ -12,6 +12,26 @@ highlighter: rouge
 
 future: true
 
+collections:
+  projects:
+    output: true
+    permalink: /projects/:path/
+  youtube:
+    output: true
+    permalink: /youtube/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
+  - scope:
+      path: ""
+      type: youtube
+    values:
+      layout: youtube_entry
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
@@ -22,3 +42,4 @@ exclude:
   - README.md
   - identity.json
   - .claude
+  - .github/copilot

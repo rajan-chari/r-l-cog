@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<div id="post">
+  <h1>{{ page.title }}</h1>
+  <div class="meta">
+    {% if page.date %}{{ page.date | date: "%d %b %Y" }}{% endif %}
+    {% if page.status %}
+      &nbsp;·&nbsp; {{ page.status }}
+    {% endif %}
+    {% if page.url_external %}
+      &nbsp;·&nbsp; <a href="{{ page.url_external }}">{{ page.url_external | replace: "https://", "" | replace: "http://", "" | truncate: 60 }}</a>
+    {% endif %}
+  </div>
+
+  {{ content }}
+
+  <div class="post-back">
+    <a href="{{ '/projects/' | relative_url }}">&laquo; all projects</a>
+  </div>
+</div>

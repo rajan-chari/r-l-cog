@@ -50,16 +50,31 @@ commands, don't manage a server.
 
 | Path | What it does |
 |------|--------------|
-| `_config.yml` | Site-wide settings: title, base URL, permalinks, plugins. Changes here require a push to take effect. |
-| `_layouts/default.html` | The outer page shell — orange topbar, footer, `<head>` tags. Every page is wrapped in this. |
-| `_layouts/home.html` | The homepage layout — renders the numbered list of posts. Uses `default` as its parent. |
-| `_layouts/post.html` | The single-post layout — title, metadata, body, back link. Uses `default` as its parent. |
-| `_posts/` | One Markdown file per post. Filename **must** be `YYYY-MM-DD-slug.md`. |
-| `index.html` | The homepage. Just frontmatter pointing at the `home` layout. |
+| `_config.yml` | Site-wide settings: title, base URL, permalinks, plugins, collections. Changes here require a push to take effect. |
+| `_layouts/default.html` | The outer page shell — title bar, footer, `<head>` tags. Every page is wrapped in this. |
+| `_layouts/home.html` | The homepage layout — renders the post list. Uses `default` as its parent. |
+| `_layouts/post.html` | Single blog post layout. Uses `default` as its parent. |
+| `_layouts/project.html` | Single project page layout. |
+| `_layouts/youtube_entry.html` | Single YouTube entry page (with embed). |
+| `_posts/` | Blog posts. Filename **must** be `YYYY-MM-DD-slug.md`. |
+| `_projects/` | Projects (Jekyll collection). Any filename ending in `.md`. |
+| `_youtube/` | YouTube entries (Jekyll collection). Any filename ending in `.md`. |
+| `index.html` | The homepage. Lists blog posts. |
+| `projects.md` | The `/projects/` index page. |
+| `youtube.md` | The `/youtube/` index page. |
 | `about.md` | The about page at `/about/`. |
-| `assets/style.css` | All styling (HN palette, typography, post list). |
+| `assets/style.css` | All styling. |
 | `Gemfile` | Ruby dependencies. Only needed for local preview. |
 | `.gitignore` | Files to skip. Notably ignores `_site/` (the build output) and `.github/copilot/`. |
+
+### Sections at a glance
+
+| URL | Content source | Add new entry by |
+|-----|----------------|------------------|
+| `/` | `_posts/*.md` | Dropping `_posts/YYYY-MM-DD-slug.md` |
+| `/projects/` | `_projects/*.md` | Dropping `_projects/slug.md` |
+| `/youtube/` | `_youtube/*.md` | Dropping `_youtube/slug.md` |
+| `/about/` | `about.md` | Editing `about.md` directly |
 
 ---
 
@@ -97,6 +112,48 @@ tags: [tag1, tag2]
 
 Just write Markdown after the closing `---`. Headings, lists, code blocks, links,
 blockquotes — all standard.
+
+---
+
+## Adding a project
+
+Drop a Markdown file into `_projects/`:
+
+```yaml
+---
+title: My Cool Project
+date: 2026-05-19
+tagline: One-line description shown on the index
+status: active            # optional: active, archived, etc.
+url_external: https://github.com/you/cool-project   # optional
+---
+
+Long-form description in Markdown.
+```
+
+Filename can be anything (e.g. `_projects/cool-project.md`); the slug becomes
+the URL path: `/projects/cool-project/`.
+
+The `tagline` appears next to the title on the `/projects/` index. The
+`url_external` shows up as a link in the project's metadata line.
+
+## Adding a YouTube video
+
+Drop a Markdown file into `_youtube/`:
+
+```yaml
+---
+title: "Talk title or video name"
+date: 2026-05-19
+youtube_id: dQw4w9WgXcQ
+---
+
+Optional commentary, links, transcript notes — anything in Markdown.
+```
+
+The `youtube_id` is the part of a YouTube URL after `?v=`. The page renders
+a responsive 16:9 embed above your commentary. The `/youtube/` index lists
+entries by date.
 
 ````markdown
 ## A section
