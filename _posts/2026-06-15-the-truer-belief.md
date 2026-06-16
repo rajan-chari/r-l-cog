@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Truer Belief Wins"
+title: "The Truer Belief"
 date: 2026-06-15 08:00:00 -0700
 tags: [epistemics, incentives, models, generalization]
 ---
